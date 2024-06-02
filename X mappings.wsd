@@ -1,0 +1,17 @@
+@startuml
+hide empty members
+hide circle
+abstract class  "X key name"
+"X key name" <|-- "Alias X key name"
+"X key name" <|-- "Canonical X key name"
+"Alias X key name" "0..*" -- "1" "X keycode" : evdev 
+"Canonical X key name" "1" -- "1" "X keycode" : evdev 
+"X key name" -- "0..*" "Keysym entry" : xkb_symbols
+abstract class "Keysym entry"
+"Keysym entry" <|-- "Keysym mnemonic"
+"Keysym entry" <|-- "Unicode code point"
+"Keysym entry" <|-- "Keysym code"
+"Keysym mnemonic" "0..*" -- "0..1" "Unicode code point" : .h
+"Keysym mnemonic" "0..*" -- "1" "Keysym code" : .h
+"Keysym code" "1" -- "1" "Unicode code point" : .h (implicit)
+@enduml

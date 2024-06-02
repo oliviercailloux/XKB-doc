@@ -29,7 +29,7 @@ image::Keyboard.svg[Signal and codes from keyboard to system, opts=inline]
 These translations from kernel to X keycodes to X key names is https://github.com/xkbcommon/libxkbcommon/blob/master/tools/interactive-wayland.c#L47[also called] “evdev keycodes” to “evdev XKB keycode”, https://xkbcommon.org/doc/current/md_doc_keymap_format_text_v1.html#autotoc_md22[or] “hardware/evdev scancodes” to “xkb keycodes”, https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/blob/master/keycodes/evdev[or] “evdev scancodes” to “something resembling xfree86 keycodes”.
 
 == Mappings
-In figure <<XM>>, _a_ --X--> _b_ means that source X maps a given _a_ to a unique _b_; _a_ --X--> _(b)?_ means that source X maps a given _a_ to zero or one _b_’s; _a_ --X--> _(b)*_ means that source X maps a given _a_ to a set of zero or more _b_’s.
+The system file `evdev` maps X keycodes to X key names; local configuration files map X key names to keysym entries; and the system file `xkbcommon-keysyms.h` maps (mainly) keysym mnemonics to keysym codes and Unicode code points. See figure <<XM>> and read below for details.
 
 .X mappings
 [[XM]]

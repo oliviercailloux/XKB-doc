@@ -78,17 +78,17 @@ Some of these terms correspond to usage I have observed on sources pointed to he
 == More info to integrate
 The following pointers might be useful. I did not integrate this information to this doc “yet” (and probably will not, but help is welcome).
 
-* https://github.com/xkbcommon/libxkbcommon/blob/238d132406d8dc1123cbcaf68ab12d34c505e7e4/include/xkbcommon/xkbcommon.h#L168-L204[impl] of libxkbcommon xkb_keysym_get_name, xkb_keysym_from_name, xkb_keysym_to_utf8, xkb_keymap_num_layouts_for_key and so on.
-* https://who-t.blogspot.com/2021/01/auto-updating-xkb-for-new-kernel.html
-* https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/src/xkb/XKBBind.c[impl] of XkbKeycodeToKeysym, XKeycodeToKeysym, XKeysymToKeycode and more complicated functions (https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/src/KeyBind.c[older one]; some related https://github.com/mirror/libX11/blob/master/src/xkb/XKBlibint.h[headers]). https://gitlab.freedesktop.org/xorg/lib/libx11/blob/master/src/StrKeysym.c[Impl] of XStringToKeysym only.
+* https://github.com/xkbcommon/libxkbcommon/blob/238d132406d8dc1123cbcaf68ab12d34c505e7e4/include/xkbcommon/xkbcommon.h#L168-L204[impl] of `libxkbcommon xkb_keysym_get_name`, `xkb_keysym_from_name`, `xkb_keysym_to_utf8`, `xkb_keymap_num_layouts_for_key` and so on.
+* https://who-t.blogspot.com/2021/01/auto-updating-xkb-for-new-kernel.html[auto-updating-xkb-for-new-kernel]
+* https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/src/xkb/XKBBind.c[impl] of `XkbKeycodeToKeysym`, `XKeycodeToKeysym`, `XKeysymToKeycode` and more complicated functions (https://gitlab.freedesktop.org/xorg/lib/libx11/-/blob/master/src/KeyBind.c[older one]; some related https://github.com/mirror/libX11/blob/master/src/xkb/XKBlibint.h[headers]). https://gitlab.freedesktop.org/xorg/lib/libx11/blob/master/src/StrKeysym.c[Impl] of `XStringToKeysym` only.
 
 On my Debian bookworm system:
 
-* libxkbcommon-x11-0 (mandatory) https://packages.debian.org/bookworm/libxkbcommon-x11-0 “This package provides an add-on library called xkbcommon-x11, to support creating keymaps with the XKB X11 protocol, by querying the X server directly.”
-* libxkbcommon0 (mandatory) https://packages.debian.org/bookworm/libxkbcommon0
+* https://packages.debian.org/bookworm/libxkbcommon-x11-0[libxkbcommon-x11-0] (mandatory): “This package provides an add-on library called xkbcommon-x11, to support creating keymaps with the XKB X11 protocol, by querying the X server directly.”
+* https://packages.debian.org/bookworm/libxkbcommon0[libxkbcommon0] (mandatory)
 * libx11-6
 * libx11-data
-* libx11-dev, requiring https://packages.debian.org/bookworm/all/x11proto-dev/filelist, containing /usr/include/X11/keysymdef.h, but non mandatory
+* libx11-dev, requiring https://packages.debian.org/bookworm/all/x11proto-dev/filelist[x11proto-dev], containing `/usr/include/X11/keysymdef.h`, but non mandatory
 * I can load the "X11" library and call XStringToKeysym("KP_Space"). “XKeycodeToKeysym predates the XKB extension. If you want to lookup a KeySym while using XKB you have to use XkbKeycodeToKeysym.” -- https://linux.die.net/man/3/xstringtokeysym 
-* xkbkeycodetokeysym https://linux.die.net/man/3/xkbkeycodetokeysym 
+* man https://linux.die.net/man/3/xkbkeycodetokeysym[xkbkeycodetokeysym]
 

@@ -26,7 +26,7 @@
   <text x="50" y="20">X key name</text>
   <path class="source" d="M 100,20 h 100" marker-end="url(#head)" />
   <text x="150" y="9">xkb_symbols</text>
-  <text x="380" y="20">(Keysym mnemonic or Unicode code point)*</text>
+  <text x="380" y="20">(Keysym mnemonic or Unicode code point or Keysym code)*</text>
   
   <path class="source" d="M 50,30  v 30" marker-end="url(#head)" />
   <text style="text-anchor: left;" x="80" y="45">evdev</text>

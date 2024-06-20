@@ -59,7 +59,7 @@ https://gitlab.freedesktop.org/xorg/proto/xorgproto/commit/b11152992d689e2f6a7d0
 
 == Concepts
 Here I define a few (hopefully) (reasonably) precise terms, in the context of the figures here above. Feel free to refer to those in your documentation of your own keyboard-and-X related libraries if you feel it helps.
-For example, I used some of them in the https://github.com/oliviercailloux/keyboardd[Keyboardd] doc.
+For example, I used some of them in the https://github.com/oliviercailloux/Keyboardd[Keyboardd] doc.
 Some of these terms correspond to usage I have observed on sources pointed to here above, others are mine.
 
 * _X keys_: the set of X key names (canonical and aliases) and corresponding X keycodes available on a system; typically read from an `evdev` file

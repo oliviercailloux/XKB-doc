@@ -21,5 +21,5 @@ abstract class "Keysym mnemonic" {
 "Keysym mnemonic" "0..*" -- "0..1" "Unicode code point" : .h
 "Canonical Keysym mnemonic" "0..1" -- "1" "Keysym code" : .h
 "Alias Keysym mnemonic" "0..*" -- "1" "Keysym code" : .h
-"Keysym code" "1" -- "1" "Unicode code point" : .h (implicit)
+"Keysym code" "1" -- "0..1" "Unicode code point" : .h (implicit)
 @enduml

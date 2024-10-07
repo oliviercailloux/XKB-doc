@@ -62,8 +62,8 @@ Here I define a few (hopefully) (reasonably) precise terms, in the context of th
 For example, I used some of them in the https://github.com/oliviercailloux/Keyboardd[Keyboardd] doc.
 Some of these terms correspond to usage I have observed on sources pointed to here above, others are mine.
 
-* _X keys_: the set of X key names (canonical and aliases) and corresponding X keycodes available on a system; typically read from an `evdev` file
-* _Keysym mnemonics_: the set of keysym mnemonics available on a system, together with information per mnemonic (the keysym code it maps to, whether it is an alias, whether it is deprecated, which UCP corresponds to it if any, …); typically read from a `xkbcommon-keysyms.h` file
+* _X keys_: a set of X key names (canonical and aliases) and corresponding X keycodes; typically read from an `evdev` file and representing the set of X key names available on a given system
+* _Keysym mnemonics_: a set of keysym mnemonics, together with information per mnemonic (the keysym code it maps to, whether it is an alias, whether it is deprecated, which UCP corresponds to it if any, …); typically read from a `xkbcommon-keysyms.h` file and representing the set of keysym mnemonics available on a given system
 * _UCP by keysym code_: maps keysym codes to their corresponding UCP (for those codes which have one)
 * _Keyboard map_: a subset of X key names, each mapped to a list of keysym entries (where a keysym entry is either a keysym mnemonic, a UCP or a keysym code, see above); typically defined in a set of local “symbol” configuration files
 * _Visible keyboard map_: a subset of X key names, each mapped to a list of representations
